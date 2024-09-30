@@ -8,9 +8,9 @@ const Nav = ({setlogin,isLogged}) => {
     const {getTotalAmount}=useContext(StoreContext);
   return (
     <div className='navbar'>
-       <Link to='/Home'><img src={assets.logo} className='logo' /></Link>
+       <Link to='/'><img src={assets.logo} className='logo' /></Link>
         <ul className='navbar-menu'>
-            <Link to='/Home' onClick={()=>setmenu("Home")} className={menu==="Home"?"active":""}>Home</Link>
+            <Link to='/' onClick={()=>setmenu("Home")} className={menu==="Home"?"active":""}>Home</Link>
             <a href='#explor-menu' onClick={()=>setmenu("Menu")} className={menu==="Menu"?"active":""}>Menu</a>
             <a href='#footer' onClick={()=>setmenu("Contact")} className={menu==="Contact"?"active":""}>Contact us</a>
         </ul>
