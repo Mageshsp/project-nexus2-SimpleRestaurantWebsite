@@ -3,7 +3,7 @@ import './Login.css'
 import { assets } from '../../assets/assets'
 import axios from 'axios'
 import { ToastContainer, toast, Slide } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = ({setlogin,setisLogged}) => {
     const [currentState,setcurrentState]=useState("Login")
