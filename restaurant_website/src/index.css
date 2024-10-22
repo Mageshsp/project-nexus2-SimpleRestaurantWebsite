@@ -6,9 +6,11 @@
   box-sizing: border-box;
   font-family: 'poppins', sans-serif;
   scroll-behavior: smooth;
+  animation: fadeIn;
 }
 body{
   min-height: 100vh;
+  background-color: wheat;
 }
 a{
   text-decoration: none;

@@ -11,7 +11,7 @@ const ExplorMenu = () => {
   return (
     <>
     <div className='explor-menu' id='explor-menu' >
-        <h1>Explor our menu</h1>
+        <h1>Explore our menu</h1>
         <p className='explor-menu-text'>Find your favorite dish from our extensive menu, offering a range of culinary delights.</p>
         <div className='explor-menu-list'>
             {menu_list.map((item,index)=>{
@@ -34,7 +34,7 @@ const ExplorMenu = () => {
             if(category==="All"||category===item.category){
   
             return( 
-              
+           <div className='food-items'>   
             <FoodItem
              key={item._id} 
              id={item._id} 
@@ -42,6 +42,7 @@ const ExplorMenu = () => {
              price={item.price} 
              description={item.description} 
              image={item.image} />
+             </div>
             );
             }
           })}

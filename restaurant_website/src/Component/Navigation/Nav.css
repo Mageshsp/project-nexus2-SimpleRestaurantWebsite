@@ -4,6 +4,11 @@
     justify-content: space-between;
     align-items: center;
     height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: wheat;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.1) ;
 }
 .navbar .logo{
     width: 160px;
@@ -19,6 +24,7 @@
 }
 .navbar-menu :hover{
     color: tomato;
+    transform: scale(1.2);
 }
 .navbar-right{
     display: flex;
@@ -44,6 +50,7 @@
 .navbar .active{
     padding-bottom: 2px;
     border-bottom: 2px solid tomato;
+    border-radius: 10px;
     color: tomato;
 }
 .navbar-search-icon{
