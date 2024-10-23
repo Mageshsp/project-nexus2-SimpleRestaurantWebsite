@@ -6,8 +6,8 @@
     height: 100px;
     position: sticky;
     top: 0;
-    z-index: 100;
-    background-color: wheat;
+    z-index: 1;
+    background-color: rgb(250,236,220);
     box-shadow: 0 1px rgba(0, 0, 0, 0.1) ;
 }
 .navbar .logo{

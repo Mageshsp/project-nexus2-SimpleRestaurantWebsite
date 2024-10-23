@@ -24,7 +24,7 @@
     display: flex;
     gap: 10px;
 }
-button{
+.logout-btn{
     background-color: tomato;
     border: none;
     border-radius: 5px;

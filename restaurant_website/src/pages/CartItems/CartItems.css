@@ -1,5 +1,34 @@
 .cart{
-    margin-top: 100px;
+    margin-top: 50px;
+    max-height: 50vh;
+    
+}
+.cart-items{
+    width: 60vw;
+}
+.no-cart{
+    display: flex;
+    flex-direction: column;
+    
+}
+.no-cart img{
+    position: relative;
+    left: 30%;
+    bottom: 40px;
+    width: 25vw;
+    height: 25vw;
+    margin: 15px;
+}
+.no-cart p{
+    font-size: 18px;
+    font-weight: 430;
+    color: #49557e;
+    text-align:center;
+    position: relative;
+    bottom: 50px;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    
 }
 .cart-items-title{
     display: grid;
@@ -7,11 +36,35 @@
     align-items: center;
     color: grey;
     font-size: 12px;
+    width: 55vw;
 }
+
 .cart-items-item{
     margin: 10px 0;
     color: black;
+    width: 55vw;
 }
+.scroll-box{
+height:30vh;
+width: 100%;
+overflow-y: scroll;
+
+}
+
+.scroll-box::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+.scroll-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+.scroll-box::-webkit-scrollbar-thumb {
+    background: tomato;
+  }
+
 .cart-items-item img{
     width: 50px;
 }
@@ -20,11 +73,42 @@
     background-color: #e2e2e2;
     border: none;
 }
+
 .cross{
     cursor: pointer;
 }
+
+.quantity{
+    width: 100px;
+    margin-left: -30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.adds-btn{
+    border: 1px solid rgb(161, 249, 161);
+    background-color: greenyellow;
+    color: green;
+    transition: background-color 1s ease;
+}
+.removes-btn{
+    border: 1px solid rgb(252, 138, 138);
+    background-color: rgb(249, 167, 167);
+    transition: background-color 1s ease;
+    color: red;
+}
+.btn{
+    width: 25px;
+    border-radius: 35%;
+}
+ .adds-btn:active{
+    background-color: rgb(84, 232, 84);
+}
+.removes-btn:active{
+    background-color: rgb(255, 120, 120);
+}
+
 .cart-bottom{
-    width: 50%;
+    width: 25%;
     margin-top: 70px;
     display: flex;
     justify-content: space-between;
@@ -35,11 +119,17 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: absolute;
+    top: 140px;
+    right: 110px;
 }
 .cart-total-details{
     display: flex;
     justify-content: space-between;
     color: #555;
+}
+ .total{
+    font-weight: 800;
 }
 .cart-total hr{
     margin: 10px 0;
@@ -54,6 +144,7 @@
     padding: 12px 0;
     border-radius: 5px;
 }
+
 
 @media(max-width:750px){
     .cart-bottom{

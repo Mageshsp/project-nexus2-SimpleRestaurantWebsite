@@ -153,13 +153,14 @@ const Login = ({setlogin,setisLogged}) => {
                     <input type='password' placeholder='Password' value={password}  required onChange={(e)=>setpassword(e.target.value)} maxLength={8}/>
                     {Serror.password && <div id='error'>{Serror.password}</div>}
                     <button type='submit' onClick={addCredential}>{currentState==="Sign Up"?"Create Account":"Login"}</button>
+                    <div className='login-condition'>
+                        <input type='checkbox' required />
+                        <p>By continuing, i agree to the terms of use & privacy policy.</p>
+                    </div>
+
                 </>)}
             </div>
             
-            <div className='login-condition'>
-                <input type='checkbox' required/>
-                <p>By continuing, i agree to the terms of use & privacy policy.</p>
-            </div>
             {currentState==="Login"? <p>Create a new account?<span onClick={()=>setcurrentState("Sign Up")}>Click here</span></p>:<p>Already have an account?<span onClick={()=>setcurrentState("Login")}>Login here</span></p>}
            
             

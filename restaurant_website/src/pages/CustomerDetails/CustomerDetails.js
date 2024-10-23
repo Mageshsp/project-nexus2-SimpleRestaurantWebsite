@@ -31,7 +31,7 @@ const CustomerDetails = () => {
 
             </div>
         </form>
-        <button onClick={logoutFn}>Logout</button>
+        <button className='logout-btn' onClick={logoutFn}>Logout</button>
     </>
   )
 }

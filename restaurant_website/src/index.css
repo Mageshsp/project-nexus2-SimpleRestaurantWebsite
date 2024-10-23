@@ -10,7 +10,7 @@
 }
 body{
   min-height: 100vh;
-  background-color: wheat;
+  background-color: rgb(250,236,220);
 }
 a{
   text-decoration: none;
@@ -27,4 +27,19 @@ a{
   100%{
     opacity: 1;
   }
+}
+
+
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: tomato;
 }
