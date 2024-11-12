@@ -28,7 +28,7 @@ const Home = ({ menu, setmenu }) => {
   }, []);
 
   const scrollToContent = () => {
-    window.scrollTo({ top: 548, behavior: 'smooth' });
+    window.scrollTo({ top: 580, behavior: 'smooth' });
   };
 
   return (
