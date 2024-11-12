@@ -1,0 +1,63 @@
+/* TermsAndConditions.css */
+
+.policy {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+ .policy h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+ .policy h2 {
+    color: #444;
+    margin-top: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+ .policy p, ul {
+    margin-bottom: 15px;
+  }
+  
+ .policy ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+.policy  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+ .policy a:hover {
+    text-decoration: underline;
+  }
+  
+ .policy li {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .policy {
+      margin: 20px;
+      padding: 15px;
+    }
+  
+   .policy h1 {
+      font-size: 24px;
+    }
+  
+   .policy h2 {
+      font-size: 18px;
+    }
+  }

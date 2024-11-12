@@ -1,0 +1,120 @@
+.footer {
+    color: #d9d9d9;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 20px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Footer Left Section */
+  .footer-left {
+    position: absolute;
+    left: 30px;
+    margin-top: 25px;
+    width: 20%;
+  }
+  
+  .footer-logo {
+    width: fit-content;
+    height: 110px;
+  }
+  
+  /* Social Icons */
+  .footer-social-icons {
+    display: flex;
+    gap: 10px;
+    width: 70px;
+    margin-left: 10px;
+  }
+  
+  .footer-social-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+  }
+  
+  .footer-social-icons img:hover {
+    filter: brightness(0.8);
+    transform: scale(1.1);
+  }
+  
+  /* Footer Center Menu */
+  .footer-container {
+    width: 40%;
+  }
+  
+  .footer-menu {
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+  
+  .footer-menu span:hover {
+    color: tomato;
+  }
+  
+  .footer-menu .active {
+    border-bottom: 2px solid tomato;
+  }
+  
+  /* Horizontal Separator */
+  hr {
+    width: 70%;
+    border: 1px solid #444;
+  }
+  
+  /* Contact Section */
+  .footer-content-contact {
+    text-align: center;
+  }
+  
+  .footer-content-contact ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-content-contact li {
+    margin-bottom: 5px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .footer-container {
+      width: 80%;
+    }
+  
+    .footer-left {
+      position: static;
+      margin-top: 0;
+      margin-bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .footer-logo {
+      width: 80px;
+      height: auto;
+    }
+  
+    .footer-social-icons {
+      justify-content: center;
+    }
+  
+    .footer-social-icons img {
+      width: 25px;
+      height: 18px;
+    }
+  
+    .footer-content-contact {
+      width: 100%;
+      font-size: 12px;
+    }
+  }

@@ -3,7 +3,15 @@ import { food_list } from "../assets/assets";
 export const StoreContext = createContext(null)
 
 export const StoreContextProvider = (props)=>{
-    const [cartItem,setcartItem]=useState({})
+    const [cartItem,setcartItem]=useState(()=>{
+        const savedCart = localStorage.getItem("cart");
+        return savedCart ? JSON.parse(savedCart) : {};
+    })
+
+    useEffect(() => {
+        // Save cartItem to localStorage whenever it changes
+        localStorage.setItem("cart", JSON.stringify(cartItem));
+    }, [cartItem]);
     
 
     const addtocart=(itemid)=>{
@@ -11,7 +19,11 @@ export const StoreContextProvider = (props)=>{
             setcartItem((prev)=>({...prev,[itemid]:1}))
         }
         else{
-            setcartItem((prev)=>({...prev,[itemid]:prev[itemid]+1}))
+            const currentQuantity=cartItem[itemid] || 0;
+            if(currentQuantity<5) {
+                setcartItem((prev)=>({...prev,[itemid]:prev[itemid]+1}))
+            }
+            
         }
     }
     const removetocart=(itemid)=>{

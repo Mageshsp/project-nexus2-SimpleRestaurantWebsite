@@ -1,0 +1,117 @@
+.homevideo {
+    width: 100%;
+    padding: 0 5vw;
+  }
+  
+  /* Background Video Section */
+  .bgvideo video {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .bgvideo {
+    height: 90vh;
+    position: relative;
+  }
+  
+  .downArrow {
+    position: fixed;
+    top: 93vh;
+    left: 48vw;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 98, 0);
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .downArrow:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Header Section */
+  .header {
+    height: 37vw;
+    margin: 10px auto 50px;
+    background: url('../../assets/header_img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-radius: 15px;
+  }
+  
+  /* Header Content */
+  .header-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.2vw;
+    max-width: 50%;
+    bottom: 8%;
+    left: 6vw;
+    animation: fadeIn 3s;
+    will-change: opacity;
+  }
+  
+  .header-content h2 {
+    font-weight: 500;
+    color: #fff;
+    font-size: max(4.5vw, 20px);
+  }
+  
+  .header-content p {
+    color: white;
+    font-size: 1vw;
+  }
+  
+  .header-content span {
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .header-content span:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1050px) {
+    .header-content {
+      max-width: 45%;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .header-content {
+      max-width: 65%;
+    }
+  
+    .header-content p {
+      display: none;
+    }
+  
+    .header-content span {
+      padding: 2vw 4vw;
+    }
+  }
+  
+  /* Hide Navigation in Header */
+  .navInHead {
+    display: none;
+  }

@@ -1,10 +1,11 @@
 .cart{
     margin-top: 50px;
-    max-height: 50vh;
+    min-height: 71vh;
     
 }
 .cart-items{
     width: 60vw;
+    padding: 25px
 }
 .no-cart{
     display: flex;
@@ -14,7 +15,7 @@
 .no-cart img{
     position: relative;
     left: 30%;
-    bottom: 40px;
+    bottom: -10px;
     width: 25vw;
     height: 25vw;
     margin: 15px;
@@ -25,7 +26,7 @@
     color: #49557e;
     text-align:center;
     position: relative;
-    bottom: 50px;
+    bottom: 10px;
     padding: 10px 0;
     letter-spacing: 1px;
     
@@ -37,12 +38,14 @@
     color: grey;
     font-size: 12px;
     width: 55vw;
+    
 }
 
 .cart-items-item{
     margin: 10px 0;
     color: black;
     width: 55vw;
+    
 }
 .scroll-box{
 height:30vh;
@@ -72,10 +75,16 @@ overflow-y: scroll;
     height: 1px;
     background-color: #e2e2e2;
     border: none;
+   width: 98%;
 }
 
 .cross{
     cursor: pointer;
+    background-color: #555;
+    text-align: center;
+    border-radius: 10px;
+    color:#fff;
+    font-weight: 700;
 }
 
 .quantity{
@@ -146,8 +155,93 @@ overflow-y: scroll;
 }
 
 
-@media(max-width:750px){
-    .cart-bottom{
-        flex-direction: column-reverse;
+@media (max-width: 750px) {
+    .cart {
+      margin-top: 20px;
+      min-height: auto;
     }
-}
+  
+    .cart-items {
+      width: 95vw;
+      padding: 5px;
+    }
+  
+    .no-cart img {
+      left: 0;
+      bottom: 0;
+      width: 50vw;
+      height: 50vw;
+      margin: 15px auto;
+    }
+  
+    .no-cart p {
+      font-size: 16px;
+      padding: 8px 0;
+    }
+  
+    .cart-items-title {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      font-size: 10px;
+      width: 95vw;
+    }
+  
+    .cart-items-item {
+      width: 90vw;
+      padding: 5px 0;
+      margin: 5px 0;
+      text-align: center;
+    }
+  
+    .scroll-box {
+      height: 40vh;
+      width: 100%;
+    }
+  
+    .cart-items-item img {
+      width: 40px;
+    }
+  
+    .quantity {
+      width: 80px;
+      margin-left: 0;
+    }
+  
+    .cart-bottom {
+      width: 40vw;
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      position: relative;
+      left: 30%;
+      gap: 10px;
+    }
+  
+    .cart-total {
+      position: static;
+      width: 100%;
+      margin-top: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .cart-total-details {
+      width: 90%;
+      font-size: 12px;
+    }
+  
+    .cart-total button {
+      width: 90%;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+  
+    .total {
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+  

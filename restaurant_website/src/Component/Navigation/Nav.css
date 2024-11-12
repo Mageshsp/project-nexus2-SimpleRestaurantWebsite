@@ -1,5 +1,6 @@
 .navbar{
-    padding: 10px 0;
+    width: 100%;
+    padding: 10px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,8 +8,8 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: rgb(250,236,220);
-    box-shadow: 0 1px rgba(0, 0, 0, 0.1) ;
+    background-color: rgb(250, 236, 220);
+    box-shadow: 0px 1px rgba(0,0,0,0.1);
 }
 .navbar .logo{
     width: 160px;
@@ -22,16 +23,16 @@
     font-size: 18px;
     cursor: pointer;
 }
-.navbar-menu :hover{
-    color: tomato;
-    transform: scale(1.2);
+.navbar-menu span:hover{
+    color: tomato; 
+    transform: scale(1.1);    
 }
 .navbar-right{
     display: flex;
     align-items: center;
     gap: 40px;
 }
-.navbar button{
+.signinbtn{
     background: transparent;
     font-size: 16px;
     color: #49557e;
@@ -40,21 +41,20 @@
     border-radius: 50px;
     cursor: pointer;
     transition: 0.3s;
-    
 }
-.navbar button:hover{
+.signinbtn button:hover{
     background-color: #fff4f2;
-    
 }
-
 .navbar .active{
-    padding-bottom: 2px;
-    border-bottom: 2px solid tomato;
-    border-radius: 10px;
-    color: tomato;
+    padding: 2px;
+    border-radius: 5px;
+    border-bottom: 3px solid tomato;
 }
 .navbar-search-icon{
     position: relative;
+}
+.basket:hover{
+    transform: scale(1.2);
 }
 .navbar-search-icon .dot{
     position: absolute;
@@ -71,7 +71,47 @@
     border-radius: 50%;
     width: fit-content;
 }
+.profile:hover{
+    transform: scale(1.1); 
+}
 
+.profile-container {
+    position: relative;
+  }
+  
+  .logoutbtn {
+    padding: 5px 0px;
+    cursor: pointer;
+    background: rgb(250, 236, 220);
+    font-size: 16px;
+    color: #49557e;
+    border-radius: 50px;
+    border: none;
+  }
+  .logoutbtn:hover{
+    transform: scale(1.1); 
+}
+.logoutbtn img{
+    max-width: 30px;
+    max-height: 30px;
+}
+  
+.cart-tooltip {
+    display: none;
+    position: absolute;
+    top: 40px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: #49557e;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  
+  .navbar-search-icon:hover .cart-tooltip {
+    display: block;
+  } 
 
 @media (max-width:1050px){
     .navbar .logo{
@@ -111,7 +151,6 @@
         font-size: 15px;
     }
 }
-
 
 @media (max-width:750px){
     
