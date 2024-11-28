@@ -62,10 +62,12 @@ import zoomimg from '../assets/expand.jpeg'
 import sendimg from '../assets/send.png'
 import emailimg from '../assets/email.png'
 import contact from '../assets/contact.png'
+import more from '../assets/more.png'
 
 
 export const assets = {
     logo,
+    more,
     contact,
     sendimg,
     emailimg,

@@ -2,8 +2,10 @@ import React, { useContext } from 'react'
 import './CartItems.css'
 import { StoreContext } from '../../Context/StoreContext'
 import emptyCart from '../../assets/emptyCart.jpeg'
+
+import { Link } from 'react-router-dom';
 const CartItems = () => {
-    const {cartItem,food_list,addtocart,removetocart,getTotalAmount} = useContext(StoreContext);
+    const {cartItem,food_list,addtocart,removetocart,getTotalAmount,remove} = useContext(StoreContext);
   return (
     <div className='cart'> 
         <div className='cart-items'>
@@ -38,7 +40,7 @@ const CartItems = () => {
                                     <p >₹{item.price}</p> 
                                     <p className='quantity'><button onClick={()=>removetocart(item._id)} className='removes-btn btn'>-</button>{cartItem[item._id]}<button onClick={()=>addtocart(item._id)} className='adds-btn btn'>+</button></p>
                                     <p >₹{item.price*cartItem[item._id]}</p>
-                                    <p onClick={()=>removetocart(item._id)} className='cross'>x</p>
+                                    <p onClick={()=>remove(item._id)} className='cross'>x</p>
                                 </div>
                                 <hr />
                             </div>
@@ -67,7 +69,7 @@ const CartItems = () => {
                     <p>Total</p>
                     <p>₹{getTotalAmount()===0?0:getTotalAmount()+20}</p>
                 </div>
-                <button>PROCEED TO PAYMENT</button>
+                <Link to="/ConfirmPayment" ><button>PROCEED TO PAYMENT</button></Link>
             </div>
         </div>
     </div>

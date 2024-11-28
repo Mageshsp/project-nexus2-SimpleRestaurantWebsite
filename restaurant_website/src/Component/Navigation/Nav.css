@@ -1,21 +1,23 @@
-.navbar{
+.navbar {
     width: 100%;
-    padding: 10px 100px;
+    padding: 10px 50px 10px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 90px;
     position: sticky;
     top: 0;
     z-index: 1;
     background-color: rgb(250, 236, 220);
-    box-shadow: 0px 1px rgba(0,0,0,0.1);
+    box-shadow: 0px 1px rgba(0, 0, 0, 0.1);
 }
-.navbar .logo{
+
+.navbar .logo {
     width: 160px;
     height: auto;
 }
-.navbar-menu{
+
+.navbar-menu {
     display: flex;
     list-style: none;
     gap: 20px;
@@ -23,16 +25,19 @@
     font-size: 18px;
     cursor: pointer;
 }
-.navbar-menu span:hover{
-    color: tomato; 
-    transform: scale(1.1);    
+
+.navbar-menu span:hover {
+    color: tomato;
+    transform: scale(1.1);
 }
-.navbar-right{
+
+.navbar-right {
     display: flex;
     align-items: center;
     gap: 40px;
 }
-.signinbtn{
+
+.signinbtn {
     background: transparent;
     font-size: 16px;
     color: #49557e;
@@ -42,21 +47,26 @@
     cursor: pointer;
     transition: 0.3s;
 }
-.signinbtn button:hover{
+
+.signinbtn button:hover {
     background-color: #fff4f2;
 }
-.navbar .active{
+
+.navbar .active {
     padding: 2px;
     border-radius: 5px;
     border-bottom: 3px solid tomato;
 }
-.navbar-search-icon{
+
+.navbar-search-icon {
     position: relative;
 }
-.basket:hover{
+
+.basket:hover {
     transform: scale(1.2);
 }
-.navbar-search-icon .dot{
+
+.navbar-search-icon .dot {
     position: absolute;
     min-width: 10px;
     min-height: 10px;
@@ -65,21 +75,23 @@
     top: -8px;
     right: -8px;
 }
-.profile{
+
+.profile {
     cursor: pointer;
     border: 2px solid tomato;
     border-radius: 50%;
     width: fit-content;
 }
-.profile:hover{
-    transform: scale(1.1); 
+
+.profile:hover {
+    transform: scale(1.1);
 }
 
 .profile-container {
     position: relative;
-  }
-  
-  .logoutbtn {
+}
+
+.logoutbtn {
     padding: 5px 0px;
     cursor: pointer;
     background: rgb(250, 236, 220);
@@ -87,19 +99,21 @@
     color: #49557e;
     border-radius: 50px;
     border: none;
-  }
-  .logoutbtn:hover{
-    transform: scale(1.1); 
 }
-.logoutbtn img{
+
+.logoutbtn:hover {
+    transform: scale(1.1);
+}
+
+.logoutbtn img {
     max-width: 30px;
     max-height: 30px;
 }
-  
+
 .cart-tooltip {
     display: none;
     position: absolute;
-    top: 40px; 
+    top: 40px;
     left: 50%;
     transform: translateX(-50%);
     color: #49557e;
@@ -107,55 +121,110 @@
     border-radius: 4px;
     font-size: 12px;
     white-space: nowrap;
-  }
-  
-  .navbar-search-icon:hover .cart-tooltip {
-    display: block;
-  } 
+}
 
-@media (max-width:1050px){
-    .navbar .logo{
+.navbar-search-icon:hover .cart-tooltip {
+    display: block;
+}
+
+@media (max-width:1050px) {
+    .navbar .logo {
         width: 140px;
     }
-    .navbar-menu{
+
+    .navbar-menu {
         gap: 20px;
         font-size: 17px;
     }
-    .navbar-right{
+
+    .navbar-right {
         gap: 30px;
     }
-    .navbar-right img{
+
+    .navbar-right img {
         width: 20px;
     }
-    .navbar-right button{
+
+    .navbar-right button {
         padding: 8px 25px;
     }
 }
 
-@media (max-width:900px){
-    .navbar .logo{
+@media (max-width:900px) {
+    .navbar .logo {
         width: 120px;
     }
-    .navbar-menu{
+
+    .navbar-menu {
         gap: 15px;
         font-size: 15px;
     }
-    .navbar-right{
+
+    .navbar-right {
         gap: 20px;
     }
-    .navbar-right img{
+
+    .navbar-right img {
         width: 20px;
     }
-    .navbar-right button{
+
+    .navbar-right button {
         padding: 7px 20px;
         font-size: 15px;
     }
+    
 }
 
-@media (max-width:750px){
-    
-    .navbar-menu{
+@media (max-width:750px) {
+    .navbar{
+        padding: 8px 10px;
+        height: 90px;
+    }
+    .navbar .logo {
+        max-width: 90px;
+        max-height: auto;
+    }
+
+    .navbar-menu {
         display: none;
     }
+    .navbar-right button {
+        max-width: 100px;
+        font-size: 12px;
+    }
+   
+}
+
+@media (max-width:450px) {
+    .navbar{
+        padding: 8px 10px;
+        height: 70px;
+    }
+    .navbar .logo {
+        max-width: 70px;
+        max-height: auto;
+    }
+
+    .navbar-right button {
+        max-width: 100px;
+        font-size: 10px;
+    }
     
+}
+@media (min-width:750px) {
+    .sidenavimg{
+        display: none;
+    }
+}
+
+.sidenavdiv{
+    display: flex;
+    gap: 20px;
+}
+.sidenavimg{
+    position: relative;
+    top: 32px;
+    left: 20px;
+    max-width: 30px;
+    max-height: 30px;
 }

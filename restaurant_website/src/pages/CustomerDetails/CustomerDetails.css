@@ -1,32 +1,85 @@
-.place-order{
+.place-order {
     display: flex;
+    justify-content: center;
     align-items: center;
-   margin-top: 50px;
+    margin-top: 10px;
+    padding: 20px;
+    gap: 40px;
+    flex-wrap: wrap; 
 }
-.place-order-left{
+
+.place-order-left {
     width: 100%;
-    max-width: max(30%,500px);
+    max-width: 500px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.place-order-left .title{
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 30px;
+
+.place-order-left .title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
 }
-.place-order-left input{
+
+.place-order-left input, 
+.place-order-left textarea {
     margin-bottom: 15px;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #c5c5c5;
     border-radius: 5px;
     outline-color: tomato;
+    font-size: 16px;
 }
-.place-order-left .multi-field{
+
+/* For fields grouped side by side */
+.place-order-left .multi-field {
     display: flex;
     gap: 10px;
 }
-.logout-btn{
+
+.place-order-left .multi-field input {
+    flex: 1;
+}
+
+.submitbtn{
+    max-width: 100%;
+    /* display: flex;
+    justify-content: end; */
+}
+
+.logout {
     background-color: tomato;
     border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
     border-radius: 5px;
-    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    
+}
+
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+    .place-order-left {
+        max-width: 90%;
+    }
 }

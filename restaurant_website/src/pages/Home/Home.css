@@ -32,11 +32,23 @@
     padding: 4px;
     cursor: pointer;
     transition: transform 0.3s;
+    animation: bounce 2s infinite;
   }
   
-  .downArrow:hover {
+  /* .downArrow:hover {
     transform: scale(1.1);
-  }
+  } */
+   @keyframes bounce{
+    0%, 20%, 50%, 80%, 100%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(-10px);
+    }
+    60%{
+      transform: translateY(-5px);
+    }
+   }
   
   /* Header Section */
   .header {
@@ -92,12 +104,22 @@
   
   /* Media Queries */
   @media (max-width: 1050px) {
+
     .header-content {
       max-width: 45%;
     }
   }
   
   @media (max-width: 750px) {
+    .homevideo .bgvideo video{
+     height: 90vh;
+     width: 95%;
+     margin-top: 50px;
+    }
+    .header{
+      height: 90vh;
+      width: 100%;
+    }
     .header-content {
       max-width: 65%;
     }
